@@ -56,8 +56,24 @@ Because pairs will need to review each other's code, we suggest scheduling ~1 ho
 
 3. Clone this fork on your computer in a different directory then your own forked repository.
       - Don't clone your pair's Slack CLI project into your normal `projects` folder, because then your computer will say that a project named `slack-cli` already exists. Navigate to or make a different folder for this exercise.
-4. Complete the feedback rubric defined in `feedback.md` by testing the app and reviewing the code. You should be making changes to your reviewee's `feedback.md` file in their `slack-cli-reflection` repo. Alter the table cells that say `yes/no` to the appropriate `yes` or `no`.
+4. Create a valid `.env` file that this new Slack CLI project can look at
+      - After cloning your reviewee's repo, `$ cd slack-cli` into your reviewee's project
+      - Create a `.env` file in this folder with `$ touch .env`
+      - Find your own Slack CLI's `.env` file, and copy the contents. You should be copying text that looks like `SLACK_TOKEN=xxxx-xxxx-xxxx`
+      - Go back to your reviewee's Slack CLI project, and paste your `SLACK_TOKEN=xxxx-xxxx...` text into that `.env` file
+5. Complete the feedback rubric defined in `feedback.md` by testing the app and reviewing the code. You should be making changes to your reviewee's `feedback.md` file in their `slack-cli-reflection` repo. Alter the table cells that say `yes/no` to the appropriate `yes` or `no`.
 
 Tip: Use VS Code's extension "Markdown Preview" in order to help you visualize the feedback table.
 
 **At the end of this review, don't forget to commit and push your review. Otherwise, instructors won't be able to see your work.**
+
+
+<details>
+    <summary>
+        For the curious: What's going on when we have to make a new valid .env file for our review?
+    </summary>
+
+Well, as you know, your Slack CLI projects are looking for the value `ENV[SLACK_TOKEN]`... and we didn't push our `.env` file to GitHub! Therefore, the reviewer is not pulling/cloning that `.env` file when they start reviewing it, so we need to provide valid credentials for them. However, there is no negative consequence to using your own token, even on your partner's project, since they're all accessing the same Slack API... just different workspaces. :)
+
+In industry, the practice that we would do is share on a team a list of test credentials. We don't have those tools right now though!
+</details>

@@ -5,7 +5,7 @@ A reflection project on Slack CLI that includes comprehension questions and peer
 
 - Individual reflection
 - Peer review
-- Due before class Monday, *DATE HERE*
+- Due before class Monday, *March 30*
 
 ## Introduction
 
